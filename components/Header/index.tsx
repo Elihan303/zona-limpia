@@ -21,7 +21,7 @@ export function Header() {
             />
             <div className="flex justify-center ">
               <span className="text-xs text-muted-foreground hidden sm:block">
-                Higienizando espacios!
+                Agua y saneamiento!
               </span>
             </div>
           </Link>
