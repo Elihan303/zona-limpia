@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { AboutSection } from "@/components/AboutSection";
+import { ServicesCards } from "@/components/ServicesCards";
 
 export default function Home() {
   return (
@@ -9,8 +10,8 @@ export default function Home() {
       <main className="flex-1">
       <HeroCarousel />
       <AboutSection />
-        {/* <ServicesCards />
-        <WhyChooseUs />
+      <ServicesCards />
+       {/* <WhyChooseUs />
         <MissionVisionValues />
         <StatsSection />
         <BrochureDownload />
