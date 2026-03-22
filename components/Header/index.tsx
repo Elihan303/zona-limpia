@@ -8,7 +8,7 @@ import { Button } from "../ui/button";
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border backdrop-blur">
+    <header className="sticky top-0 z-50 w-full bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80 border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo y eslogan */}
