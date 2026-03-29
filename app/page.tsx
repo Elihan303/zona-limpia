@@ -4,6 +4,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { ServicesCards } from "@/components/ServicesCards";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { MissionVisionValues } from "@/components/MissionVisionValues";
+import { StatsSection } from "@/components/StatsSection";
 
 export default function Home() {
   return (
@@ -15,8 +16,8 @@ export default function Home() {
         <ServicesCards />
         <WhyChooseUs />
         <MissionVisionValues />
-        {/* <StatsSection />
-        <BrochureDownload />
+        <StatsSection />
+        {/*<BrochureDownload />
         <ServiceTypes /> */}
       </main>
       {/* <Footer /> */}
