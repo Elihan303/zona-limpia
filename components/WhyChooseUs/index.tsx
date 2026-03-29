@@ -30,7 +30,7 @@ const reasons = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-16 lg:py-24 bg-background">
+    <section className="py-16 lg:py-24 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative w-full h-64 md:h-96">
