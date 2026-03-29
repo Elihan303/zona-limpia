@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { AboutSection } from "@/components/AboutSection";
 import { ServicesCards } from "@/components/ServicesCards";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -11,8 +12,8 @@ export default function Home() {
       <HeroCarousel />
       <AboutSection />
       <ServicesCards />
-       {/* <WhyChooseUs />
-        <MissionVisionValues />
+       <WhyChooseUs />
+         {/*<MissionVisionValues />
         <StatsSection />
         <BrochureDownload />
         <ServiceTypes /> */}
