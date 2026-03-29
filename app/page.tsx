@@ -7,6 +7,7 @@ import { MissionVisionValues } from "@/components/MissionVisionValues";
 import { StatsSection } from "@/components/StatsSection";
 import { BrochureDownload } from "@/components/BrochureDownload";
 import { ServiceTypes } from "@/components/ServiceTypes";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
         <BrochureDownload />
         <ServiceTypes />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
