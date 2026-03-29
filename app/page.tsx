@@ -6,6 +6,7 @@ import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { MissionVisionValues } from "@/components/MissionVisionValues";
 import { StatsSection } from "@/components/StatsSection";
 import { BrochureDownload } from "@/components/BrochureDownload";
+import { ServiceTypes } from "@/components/ServiceTypes";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
         <MissionVisionValues />
         <StatsSection />
         <BrochureDownload />
-        {/* <ServiceTypes /> */}
+        <ServiceTypes />
       </main>
       {/* <Footer /> */}
     </div>
