@@ -1,3 +1,4 @@
+"use client";
 import { Download, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -17,11 +18,12 @@ export function BrochureDownload() {
             sobre Zona Limpia
           </p>
           <Button
+            onClick={() => window.open("/zona-limpia-2025.pdf", "_blank")}
             size="lg"
             className="bg-primary hover:bg-accent text-primary-foreground gap-2"
           >
             <Download className="h-5 w-5" />
-            Descargar Brochure Informativo
+            Descargar brochure Informativo
           </Button>
         </div>
       </div>
