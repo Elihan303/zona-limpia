@@ -1,41 +1,92 @@
 import { ServiceItem } from "@/components/ServiceItem";
+import { Droplets, SprayCan, Wrench } from "lucide-react";
+
+const categories = [
+  {
+    id: "agua",
+    title: "Agua",
+    icon: Droplets,
+    description:
+      "Servicios profesionales de perforación, tratamiento y mantenimiento de sistemas de agua",
+  },
+  {
+    id: "saneamiento",
+    title: "Saneamiento",
+    icon: SprayCan,
+    description:
+      "Limpieza industrial especializada para todo tipo de instalaciones y superficies",
+  },
+  {
+    id: "reformas",
+    title: "Reformas",
+    icon: Wrench,
+    description: "Construcción y mejoras en sistemas de drenaje y agua potable",
+  },
+];
 
 const services = [
   {
+    title: "Perforación de Pozos",
+    description:
+      "Servicio profesional de perforación de pozos de agua y filtrantes, con equipos especializados para garantizar el acceso a agua subterránea de calidad.",
+    image: "/assets/well-drilling-truck.jpg",
+    category: "Agua",
+  },
+  {
+    title: "Tratamiento de Agua",
+    description:
+      "Venta e instalación de equipos de tratamiento de agua, incluyendo sistemas de filtración, purificación y potabilización para uso residencial e industrial.",
+    image: "/assets/water-treatment-system.jpg",
+    category: "Agua",
+  },
+  {
     title: "Limpieza de Cisternas",
     description:
-      "Servicio profesional de limpieza y desinfección de cisternas y tanques de agua, garantizando agua potable segura para su consumo.",
-    image: "/cistern-cleaning-service.jpg",
+      "Limpieza y desinfección profesional de cisternas y aljibes, garantizando agua potable segura y libre de contaminantes para su consumo.",
+    image: "/assets/water-tank-cleaning-service.jpg",
+    category: "Agua",
   },
   {
-    title: "Fumigación Industrial",
+    title: "Limpieza de Ductos y Campanas",
     description:
-      "Control de plagas profesional para industrias y empresas, utilizando productos seguros y aprobados por las autoridades sanitarias.",
-    image: "/industrial-fumigation-service.jpg",
+      "Servicio especializado de limpieza de ductos de ventilación y campanas de grasa para restaurantes, hoteles e industrias alimentarias.",
+    image: "/assets/duct-cleaning-work.jpg",
+    category: "Saneamiento",
   },
   {
-    title: "Limpieza de Oficinas",
+    title: "Limpieza de Pisos",
     description:
-      "Mantenimiento y limpieza integral de espacios de trabajo, creando ambientes saludables y productivos para su equipo.",
-    image: "/office-cleaning-professional.jpg",
+      "Limpieza profesional y pulido de pisos y revestimientos con equipos industriales de última generación para todo tipo de superficies.",
+    image: "/assets/floor-cleaning-machine.jpg",
+    category: "Saneamiento",
   },
   {
-    title: "Tratamiento de Aguas",
+    title: "Limpieza de Obras Civiles",
     description:
-      "Análisis, tratamiento y purificación de agua para uso industrial y comercial, cumpliendo con todas las normativas vigentes.",
-    image: "/water-treatment-service.jpg",
+      "Limpieza gruesa y fina para entrega de obras civiles, preparando espacios nuevos para su inauguración con los más altos estándares.",
+    image: "/assets/cleaning-crew-team.jpg",
+    category: "Saneamiento",
   },
   {
-    title: "Desinfección Especializada",
+    title: "Limpieza a Presión",
     description:
-      "Protocolos de desinfección profunda para áreas de alto tráfico, hospitales, restaurantes y espacios públicos.",
-    image: "/specialized-disinfection-service.jpg",
+      "Limpieza y destape de tuberías a presión, así como lavado de superficies exteriores con hidrolavadoras profesionales.",
+    image: "/assets/pressure-washing-floor.jpg",
+    category: "Saneamiento",
   },
   {
     title: "Mantenimiento de Sistemas",
     description:
-      "Mantenimiento preventivo y correctivo de sistemas hidráulicos, aires acondicionados y ductos de ventilación.",
-    image: "/maintenance-systems-service.jpg",
+      "Mejoras en sistemas sanitarios, mantenimiento de equipos industriales y reparación de infraestructura hidráulica.",
+    image: "/assets/boiler-maintenance.jpg",
+    category: "Reformas",
+  },
+  {
+    title: "Drenajes Pluviales",
+    description:
+      "Construcción y mantenimiento de sistemas de drenajes pluviales, asegurando el correcto manejo de aguas lluvia en su propiedad.",
+    image: "/assets/water-treatment-facility-professional.jpg",
+    category: "Reformas",
   },
 ];
 
@@ -43,16 +94,38 @@ export function ServicesList() {
   return (
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <ServiceItem
-              key={index}
-              title={service.title}
-              description={service.description}
-              image={service.image}
-            />
-          ))}
-        </div>
+        {categories.map((category) => {
+          const categoryServices = services.filter(
+            (s) => s.category === category.title,
+          );
+          return (
+            <div key={category.id} className="mb-16 last:mb-0">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 bg-primary/10 rounded-lg">
+                  <category.icon className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold">
+                    {category.title}
+                  </h2>
+                  <p className="text-muted-foreground">
+                    {category.description}
+                  </p>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                {categoryServices.map((service, index) => (
+                  <ServiceItem
+                    key={index}
+                    title={service.title}
+                    description={service.description}
+                    image={service.image}
+                  />
+                ))}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
