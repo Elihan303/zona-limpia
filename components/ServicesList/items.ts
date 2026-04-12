@@ -47,21 +47,14 @@ const WaterServices = [
     category: CategoriesServices.water,
   },
   {
-    title: "Limpieza de cisternas y aljibes",
+    title: "Limpieza de pozo y trampa",
     description:
-      "Limpieza y desinfección profesional de cisternas y aljibes, garantizando agua potable segura y libre de contaminantes para su consumo.",
+      "Servicio de succión y mantenimiento preventivo de pozo séptico y trampa de grasa para evitar obstrucciones, malos olores y fallas en el sistema sanitario..",
     image: "/assets/water-tank-cleaning-service.jpg",
     category: CategoriesServices.water,
   },
   {
-    title: "Limpieza de pozo séptico y trampa de grasa",
-    description:
-      "Servicio de succión y mantenimiento preventivo para evitar obstrucciones, malos olores y fallas en el sistema sanitario.",
-    image: "/assets/water-tank-cleaning-service.jpg",
-    category: CategoriesServices.water,
-  },
-  {
-    title: "Limpieza y destape de tuberías a presión",
+    title: "Limpieza y destape de tuberías",
     description:
       "Desobstrucción eficiente mediante equipos de alta presión, restaurando el flujo adecuado en redes sanitarias y pluviales.",
     image: "/assets/water-tank-cleaning-service.jpg",
