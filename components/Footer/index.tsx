@@ -67,21 +67,16 @@ export function Footer() {
             <h4 className="font-semibold">Síguenos</h4>
             <div className="flex gap-4">
               <a
-                href="#"
-                className="p-2 bg-background/10 rounded-full hover:bg-primary transition-colors"
-                aria-label="Facebook"
-              >
-                <FaFacebook className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
+                target="_blank"
+                href="https://www.instagram.com/zonalimpia.rd"
                 className="p-2 bg-background/10 rounded-full hover:bg-primary transition-colors"
                 aria-label="Instagram"
               >
                 <FaInstagram className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                target="_blank"
+                href="https://www.linkedin.com/company/zona-limpia-srl"
                 className="p-2 bg-background/10 rounded-full hover:bg-primary transition-colors"
                 aria-label="LinkedIn"
               >
