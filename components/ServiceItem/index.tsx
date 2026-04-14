@@ -9,7 +9,12 @@ export interface ServiceItemProps {
   onViewMore?: () => void;
 }
 
-export function ServiceItem({ title, description, image }: ServiceItemProps) {
+export function ServiceItem({
+  title,
+  description,
+  image,
+  onViewMore,
+}: ServiceItemProps) {
   return (
     <Card className="overflow-hidden border-border hover:border-primary/50 transition-all hover:shadow-lg group">
       <div className="relative h-48 overflow-hidden">
@@ -27,6 +32,7 @@ export function ServiceItem({ title, description, image }: ServiceItemProps) {
         <Button
           variant="outline"
           className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
+          onClick={onViewMore}
         >
           Ver más
         </Button>

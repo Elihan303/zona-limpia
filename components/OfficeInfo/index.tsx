@@ -40,10 +40,10 @@ export function OfficeInfo() {
             <div>
               <p className="font-medium">Correo</p>
               <a
-                href="mailto:info@zonalimpia.com"
+                href="mailto:ventas@zonalimpia.com.do"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
-                info@zonalimpia.com
+                ventas@zonalimpia.com.do
               </a>
             </div>
           </li>
