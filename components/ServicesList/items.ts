@@ -30,6 +30,7 @@ const WaterServices = [
     description:
       "Servicio profesional de perforación de pozos de agua y filtrantes, con equipos especializados para garantizar el acceso a agua subterránea de calidad.",
     image: "/assets/well-drilling-truck.jpg",
+    imagePosition: "center",
     category: CategoriesServices.water,
   },
   {
@@ -37,6 +38,7 @@ const WaterServices = [
     description:
       "Venta e instalación de equipos de tratamiento de agua, incluyendo sistemas de filtración, purificación y potabilización para uso residencial e industrial.",
     image: "/assets/water-treatment-system.jpg",
+    imagePosition: "center",
     category: CategoriesServices.water,
   },
   {
@@ -44,20 +46,23 @@ const WaterServices = [
     description:
       "Limpieza y desinfección profesional de cisternas y aljibes, garantizando agua potable segura y libre de contaminantes para su consumo.",
     image: "/assets/water-tank-cleaning-service.jpg",
+    imagePosition: "center top",
     category: CategoriesServices.water,
   },
   {
     title: "Limpieza de pozo y trampa",
     description:
-      "Servicio de succión y mantenimiento preventivo de pozo séptico y trampa de grasa para evitar obstrucciones, malos olores y fallas en el sistema sanitario..",
-    image: "/assets/water-tank-cleaning-service.jpg",
+      "Servicio de succión y mantenimiento preventivo de pozo séptico y trampa de grasa para evitar obstrucciones, malos olores y fallas en el sistema sanitario.",
+    image: "/assets/water-storage-tank-maintenance.jpg",
+    imagePosition: "center",
     category: CategoriesServices.water,
   },
   {
     title: "Limpieza y destape de tuberías",
     description:
       "Desobstrucción eficiente mediante equipos de alta presión, restaurando el flujo adecuado en redes sanitarias y pluviales.",
-    image: "/assets/water-tank-cleaning-service.jpg",
+    image: "/assets/water-treatment-facility-professional.jpg",
+    imagePosition: "center",
     category: CategoriesServices.water,
   },
 ];
@@ -67,13 +72,15 @@ const SanitationServices = [
     description:
       "Servicio especializado de limpieza de ductos de ventilación y campanas de grasa para restaurantes, hoteles e industrias alimentarias.",
     image: "/assets/duct-cleaning-work.jpg",
+    imagePosition: "center",
     category: CategoriesServices.sanitation,
   },
   {
     title: "Limpieza de tapizados industriales",
     description:
       "Limpieza profunda de mobiliarios y superficies textiles, removiendo manchas, polvo y agentes contaminantes.",
-    image: "/assets/duct-cleaning-work.jpg",
+    image: "/assets/office-cleaning-professional.jpg",
+    imagePosition: "center",
     category: CategoriesServices.sanitation,
   },
   {
@@ -81,6 +88,7 @@ const SanitationServices = [
     description:
       "Restauración y mantenimiento de superficies, devolviendo brillo, uniformidad y prolongando su vida útil.",
     image: "/assets/floor-cleaning-machine.jpg",
+    imagePosition: "center",
     category: CategoriesServices.sanitation,
   },
   {
@@ -88,6 +96,7 @@ const SanitationServices = [
     description:
       "Servicio especializado en fachadas y superficies elevadas, con personal capacitado y equipos de seguridad certificados.",
     image: "/assets/pressure-washing-floor.jpg",
+    imagePosition: "center top",
     category: CategoriesServices.sanitation,
   },
   {
@@ -95,6 +104,7 @@ const SanitationServices = [
     description:
       "Limpieza gruesa y fina para entrega de obras civiles, preparando espacios nuevos para su inauguración con los más altos estándares.",
     image: "/assets/cleaning-crew-team.jpg",
+    imagePosition: "center",
     category: CategoriesServices.sanitation,
   },
 ];
@@ -103,7 +113,8 @@ const ReformsServices = [
     title: "Drenajes Pluviales",
     description:
       "Construcción y mantenimiento de sistemas de drenajes pluviales, asegurando el correcto manejo de aguas lluvia en su propiedad.",
-    image: "/assets/water-treatment-facility-professional.jpg",
+    image: "/assets/building-renovation-construction.jpg",
+    imagePosition: "center",
     category: CategoriesServices.reforms,
   },
   {
@@ -111,13 +122,15 @@ const ReformsServices = [
     description:
       "Optimización y renovación de redes de agua potable, mejorando eficiencia, presión y calidad del suministro.",
     image: "/assets/boiler-maintenance.jpg",
+    imagePosition: "center",
     category: CategoriesServices.reforms,
   },
   {
     title: "Mejoras en sistemas sanitarios",
     description:
       "Adecuación y modernización de sistemas sanitarios para garantizar funcionalidad, cumplimiento normativo y durabilidad.",
-    image: "/assets/boiler-maintenance.jpg",
+    image: "/assets/industrial-cleaning-professional-team.jpg",
+    imagePosition: "center",
     category: CategoriesServices.reforms,
   },
 ];

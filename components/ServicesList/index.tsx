@@ -42,6 +42,7 @@ export function ServicesList() {
                     title={service.title}
                     description={service.description}
                     image={service.image}
+                    imagePosition={service.imagePosition}
                     onViewMore={() => setSelectedService(service)}
                   />
                 ))}

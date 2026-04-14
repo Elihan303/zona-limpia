@@ -6,6 +6,7 @@ export interface ServiceItemProps {
   title: string;
   description: string;
   image: string;
+  imagePosition?: string;
   onViewMore?: () => void;
 }
 
@@ -13,16 +14,18 @@ export function ServiceItem({
   title,
   description,
   image,
+  imagePosition = "center",
   onViewMore,
 }: ServiceItemProps) {
   return (
-    <Card className="overflow-hidden border-border hover:border-primary/50 transition-all hover:shadow-lg group">
+    <Card className="overflow-hidden border-border hover:border-primary/50 transition-all hover:shadow-lg group p-0">
       <div className="relative h-48 overflow-hidden">
         <Image
           fill
-          src={image || "/placeholder.svg"}
+          src={image}
           alt={title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          style={{ objectPosition: imagePosition }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
       </div>
