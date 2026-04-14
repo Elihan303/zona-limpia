@@ -1,7 +1,3 @@
-// import { Header } from "@/components/header";
-// import { Footer } from "@/components/footer";
-// import { ContactForm } from "@/components/contact-form";
-// import { OfficeInfo } from "@/components/office-info";
 import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";

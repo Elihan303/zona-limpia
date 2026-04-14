@@ -10,16 +10,40 @@ import { Send } from "lucide-react";
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
-    // Simular envío del formulario
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const form = e.currentTarget;
+    const body = {
+      companyName: (form.elements.namedItem("company") as HTMLInputElement)
+        .value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      subject: (form.elements.namedItem("subject") as HTMLInputElement).value,
+      description: (
+        form.elements.namedItem("description") as HTMLTextAreaElement
+      ).value,
+    };
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+
+      if (!res.ok) throw new Error("Error al enviar el mensaje");
+
+      setIsSubmitted(true);
+    } catch (e) {
+      console.log("e:", e);
+      setError("Hubo un problema al enviar tu mensaje. Intenta de nuevo.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -90,6 +114,8 @@ export function ContactForm() {
           className="bg-background resize-none"
         />
       </div>
+
+      {error && <p className="text-sm text-destructive">{error}</p>}
 
       <Button
         type="submit"

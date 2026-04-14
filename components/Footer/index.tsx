@@ -34,10 +34,10 @@ export function Footer() {
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary" />
                 <a
-                  href="mailto:info@zonalimpia.com"
+                  href="mailto:ventas@zonalimpia.com.do"
                   className="hover:text-background transition-colors"
                 >
-                  info@zonalimpia.com
+                  ventas@zonalimpia.com.do
                 </a>
               </li>
               <li className="flex items-start gap-2">

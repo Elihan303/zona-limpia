@@ -31,9 +31,9 @@ export function ContactCTA() {
               variant="outline"
               className="gap-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
             >
-              <a href="mailto:info@zonalimpia.com">
+              <a href="mailto:ventas@zonalimpia.com.do">
                 <Mail className="h-5 w-5" />
-                info@zonalimpia.com
+                ventas@zonalimpia.com.do
               </a>
             </Button>
           </div>
