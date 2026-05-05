@@ -15,8 +15,8 @@ export function Header() {
           <Link href="/" className="md:flex items-center gap-2">
             <Image
               src="/logo.png"
-              width={200}
-              height={200}
+              width={35}
+              height={35}
               alt="Zona Limpia Logo"
             />
             <div className="flex justify-center ">
