@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -7,13 +7,13 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const siteUrl = "https://zonalimpia.com.do";
 
 export const metadata: Metadata = {
-  title: "Zona limpia",
+  title: {
+    default: "Zona Limpia",
+    template: "%s - Zona Limpia",
+  },
   description: "Higienizando espacios!",
   robots: "index, follow",
   authors: [
@@ -22,6 +22,14 @@ export const metadata: Metadata = {
       url: "https://elihan-th.netlify.app/",
     },
   ],
+  openGraph: {
+    title: "Zona Limpia",
+    description: "Higienizaci\u00f3n industrial profesional en Rep\u00fablica Dominicana. M\u00e1s de 8 a\u00f1os de experiencia.",
+    url: siteUrl,
+    siteName: "Zona Limpia",
+    locale: "es_DO",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -31,9 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} antialiased`}>
         {children}
       </body>
     </html>

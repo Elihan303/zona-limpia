@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export function Footer() {
   return (
@@ -68,6 +68,7 @@ export function Footer() {
             <div className="flex gap-4">
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.instagram.com/zonalimpia.rd"
                 className="p-2 bg-background/10 rounded-full hover:bg-primary transition-colors"
                 aria-label="Instagram"
@@ -76,6 +77,7 @@ export function Footer() {
               </a>
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/company/zona-limpia-srl"
                 className="p-2 bg-background/10 rounded-full hover:bg-primary transition-colors"
                 aria-label="LinkedIn"

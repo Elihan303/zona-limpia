@@ -2,24 +2,9 @@ import { Target, Eye, Heart } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 const items = [
-  {
-    icon: Target,
-    title: "Misión",
-    description:
-      "Proporcionar servicios de higienización de alta calidad que superen las expectativas de nuestros clientes, contribuyendo a espacios más seguros y saludables.",
-  },
-  {
-    icon: Eye,
-    title: "Visión",
-    description:
-      "Ser la empresa líder en higienización industrial en República Dominicana, reconocida por nuestra excelencia, innovación y compromiso con el medio ambiente.",
-  },
-  {
-    icon: Heart,
-    title: "Valores",
-    description:
-      "Integridad, responsabilidad, calidad, compromiso con el cliente, trabajo en equipo y respeto por el medio ambiente son los pilares que guían nuestro trabajo.",
-  },
+  { icon: Target, title: "Mision", description: "Proporcionar servicios de higienizacion de alta calidad que superen las expectativas de nuestros clientes, contribuyendo a espacios mas seguros y saludables." },
+  { icon: Eye, title: "Vision", description: "Ser la empresa lider en higienizacion industrial en Republica Dominicana, reconocida por nuestra excelencia, innovacion y compromiso con el medio ambiente." },
+  { icon: Heart, title: "Valores", description: "Integridad, responsabilidad, calidad, compromiso con el cliente, trabajo en equipo y respeto por el medio ambiente son los pilares que guian nuestro trabajo." },
 ];
 
 export function MissionVisionValues() {

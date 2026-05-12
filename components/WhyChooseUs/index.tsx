@@ -2,30 +2,10 @@ import { Shield, Clock, Award, Users } from "lucide-react";
 import Image from "next/image";
 
 const reasons = [
-  {
-    icon: Shield,
-    title: "Calidad Garantizada",
-    description:
-      "Utilizamos productos y equipos de primera calidad para asegurar resultados óptimos.",
-  },
-  {
-    icon: Clock,
-    title: "Puntualidad",
-    description:
-      "Cumplimos con los tiempos acordados, respetando su agenda y necesidades.",
-  },
-  {
-    icon: Award,
-    title: "Experiencia",
-    description:
-      "Más de 8 años en el mercado nos respaldan como líderes en higienización.",
-  },
-  {
-    icon: Users,
-    title: "Equipo Profesional",
-    description:
-      "Personal capacitado y comprometido con la excelencia en el servicio.",
-  },
+  { Icon: Shield, title: "Calidad Garantizada", description: "Utilizamos productos y equipos de primera calidad para asegurar resultados optimos." },
+  { Icon: Clock, title: "Puntualidad", description: "Cumplimos con los tiempos acordados, respetando su agenda y necesidades." },
+  { Icon: Award, title: "Experiencia", description: "Mas de 8 anos en el mercado nos respaldan como lideres en higienizacion." },
+  { Icon: Users, title: "Equipo Profesional", description: "Personal capacitado y comprometido con la excelencia en el servicio." },
 ];
 
 export function WhyChooseUs() {
@@ -54,7 +34,7 @@ export function WhyChooseUs() {
               {reasons.map((reason, index) => (
                 <div key={index} className="flex gap-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                    <reason.icon className="w-6 h-6 text-primary" />
+                    <reason.Icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">

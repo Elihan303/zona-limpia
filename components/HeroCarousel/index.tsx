@@ -1,10 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+
+const mod = (n: number, m: number) => ((n % m) + m) % m;
 
 const slides = [
   {
@@ -36,9 +38,8 @@ export function HeroCarousel() {
     return () => clearInterval(timer);
   }, []);
 
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
-  const prevSlide = () =>
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  const nextSlide = useCallback(() => setCurrentSlide((prev) => mod(prev + 1, slides.length)), []);
+  const prevSlide = useCallback(() => setCurrentSlide((prev) => mod(prev - 1, slides.length)), []);
 
   return (
     <section className="relative h-[400px] md:h-[500px] lg:h-[550px] overflow-hidden">

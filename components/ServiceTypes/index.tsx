@@ -4,24 +4,9 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const serviceTypes = [
-  {
-    icon: Building2,
-    title: "Servicios Empresariales",
-    description:
-      "Soluciones de higienización diseñadas para oficinas, comercios y espacios corporativos.",
-  },
-  {
-    icon: Factory,
-    title: "Servicios Industriales",
-    description:
-      "Limpieza especializada para plantas de producción, almacenes y facilidades industriales.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Servicios de Asesoría",
-    description:
-      "Consultoría profesional en protocolos de higiene y cumplimiento de normativas sanitarias.",
-  },
+  { Icon: Building2, title: "Servicios Empresariales", description: "Soluciones de higienizacion disenadas para oficinas, comercios y espacios corporativos." },
+  { Icon: Factory, title: "Servicios Industriales", description: "Limpieza especializada para plantas de produccion, almacenes y facilidades industriales." },
+  { Icon: ClipboardCheck, title: "Servicios de Asesoria", description: "Consultoria profesional en protocolos de higiene y cumplimiento de normativas sanitarias." },
 ];
 
 export function ServiceTypes() {
@@ -44,7 +29,7 @@ export function ServiceTypes() {
             >
               <CardHeader>
                 <div className="mx-auto p-4 bg-secondary rounded-full w-fit mb-4 group-hover:bg-primary transition-colors">
-                  <service.icon className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />
+                  <service.Icon className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />
                 </div>
                 <CardTitle className="text-xl">{service.title}</CardTitle>
               </CardHeader>

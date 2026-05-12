@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { ServiceItem } from "@/components/ServiceItem";
 import { categories, services } from "./items";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../ui/dialog";
@@ -13,13 +13,29 @@ type Service = (typeof services)[number];
 export function ServicesList() {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
+  const groupedServices = useMemo(
+    () =>
+      Object.fromEntries(
+        categories.map((c) => [c.id, services.filter((s) => s.category === c.id)]),
+      ),
+    [],
+  );
+
+  const handleServiceClick = useCallback(
+    (service: Service) => setSelectedService(service),
+    [],
+  );
+
+  const handleOpenChange = useCallback(
+    (open: boolean) => { if (!open) setSelectedService(null); },
+    [],
+  );
+
   return (
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         {categories.map((category) => {
-          const categoryServices = services.filter(
-            (s) => s.category === category.id,
-          );
+          const categoryServices = groupedServices[category.id];
           return (
             <div key={category.id} className="mb-16 last:mb-0">
               <div className="flex items-center gap-3 mb-4">
@@ -36,14 +52,14 @@ export function ServicesList() {
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-                {categoryServices.map((service, index) => (
+                {categoryServices.map((service) => (
                   <ServiceItem
-                    key={index}
+                    key={service.title}
                     title={service.title}
                     description={service.description}
                     image={service.image}
                     imagePosition={service.imagePosition}
-                    onViewMore={() => setSelectedService(service)}
+                    onViewMore={() => handleServiceClick(service)}
                   />
                 ))}
               </div>
@@ -51,10 +67,9 @@ export function ServicesList() {
           );
         })}
       </div>
-      {/* Modal de detalles del servicio */}
       <Dialog
         open={!!selectedService}
-        onOpenChange={(open) => !open && setSelectedService(null)}
+        onOpenChange={handleOpenChange}
       >
         <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
           {selectedService && (

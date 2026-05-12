@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -12,20 +12,17 @@ export function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = useCallback(async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
 
     const form = e.currentTarget;
     const body = {
-      companyName: (form.elements.namedItem("company") as HTMLInputElement)
-        .value,
+      companyName: (form.elements.namedItem("company") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       subject: (form.elements.namedItem("subject") as HTMLInputElement).value,
-      description: (
-        form.elements.namedItem("description") as HTMLTextAreaElement
-      ).value,
+      description: (form.elements.namedItem("description") as HTMLTextAreaElement).value,
     };
 
     try {
@@ -34,17 +31,14 @@ export function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-
       if (!res.ok) throw new Error("Error al enviar el mensaje");
-
       setIsSubmitted(true);
-    } catch (e) {
-      console.log("e:", e);
+    } catch {
       setError("Hubo un problema al enviar tu mensaje. Intenta de nuevo.");
     } finally {
       setIsSubmitting(false);
     }
-  };
+  }, []);
 
   if (isSubmitted) {
     return (

@@ -1,4 +1,3 @@
-"use client";
 import { Download, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -10,20 +9,13 @@ export function BrochureDownload() {
           <div className="p-4 bg-primary rounded-full w-fit mx-auto mb-6">
             <FileText className="h-10 w-10 text-primary-foreground" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Descarga Nuestro Brochure
-          </h2>
-          <p className="text-muted-foreground mb-8">
-            Conoce todos nuestros servicios, precios y más información detallada
-            sobre Zona Limpia
-          </p>
-          <Button
-            onClick={() => window.open("/zona-limpia-2025.pdf", "_blank")}
-            size="lg"
-            className="bg-primary hover:bg-accent text-primary-foreground gap-2"
-          >
-            <Download className="h-5 w-5" />
-            Descargar brochure Informativo
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Descarga Nuestro Brochure</h2>
+          <p className="text-muted-foreground mb-8">Conoce todos nuestros servicios, precios y mas informacion detallada sobre Zona Limpia</p>
+          <Button asChild size="lg" className="bg-primary hover:bg-accent text-primary-foreground gap-2">
+            <a href="/zona-limpia-2025.pdf" target="_blank" rel="noopener noreferrer">
+              <Download className="h-5 w-5" />
+              Descargar brochure Informativo
+            </a>
           </Button>
         </div>
       </div>

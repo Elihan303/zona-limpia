@@ -5,7 +5,7 @@ import { ServicesList } from "@/components/ServicesList";
 import { ContactCTA } from "@/components/ContactCTA";
 
 export const metadata = {
-  title: "Servicios - Zona Limpia",
+  title: "Servicios",
   description:
     "Conoce todos nuestros servicios de higienización industrial, limpieza y tratamiento de agua.",
 };

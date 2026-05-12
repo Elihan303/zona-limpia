@@ -5,7 +5,7 @@ import { OfficeInfo } from "@/components/OfficeInfo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata = {
-  title: "Contacto - Zona Limpia",
+  title: "Contacto",
   description:
     "Contáctanos para solicitar una cotización o más información sobre nuestros servicios de higienización.",
 };

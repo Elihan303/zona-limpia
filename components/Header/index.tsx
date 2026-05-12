@@ -12,7 +12,7 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo y eslogan */}
-          <Link href="/" className="md:flex flex-col items-center ">
+          <Link href="/" className="flex flex-col items-center">
             <Image
               src="/logo.png"
               width={200}
